@@ -459,3 +459,132 @@
 }
 /*My Order Details Style E
 ---------------------------*/
+/**************************/
+/*Message Style S
+---------------------------*/
+.chatWrapper {
+    box-shadow: 0 0 6px 4px #eaeaea;
+    height: 100%;
+}
+.chat-user {
+    max-width: 380px;
+    flex: 0 0 380px;
+}
+.chat-details{
+    max-width: calc(100% - 380px);
+    flex: 0 0 calc(100% - 380px);    
+}
+.chat-filter {
+    padding: 20px 30px;
+}
+.chat-filter input {
+    width: 100%;
+    height: 40px;
+    background: #f7f7f7;
+    border: 0;
+    padding: 8px 20px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 12px;
+}
+.each-user-wrapper li:first-child{
+    border-top: solid 1px #e1e1e1;
+}
+.each-user-wrapper li{
+    border-bottom: solid 1px #e1e1e1;
+    padding:15px;
+}
+.each-user-wrapper li.active,
+.each-user-wrapper li:hover{
+    background: #edeaea;
+}
+.each-user-img {
+    max-width: 70px;
+    flex: 0 0 70px;
+    padding-right: 10px;
+}
+.each-user-img img {
+    height: 56px;
+    border-radius: 50%;
+    width: 56px;
+    object-fit: cover;
+}
+.each-user-detail{
+    max-width:calc(100% - 70px);
+    flex: 0 0 calc(100% - 70px);
+}
+.each-user-wrapper li a{
+    display: block;
+    color: #292e34;
+}
+#wrapper .each-user-wrapper li a:hover{
+    color: #292e34;
+    text-decoration: none;
+}
+.chat-details-inner{
+    padding: 30px 0;
+}
+#wrapper .chat-details-inner .subTitle{
+    padding: 0 30px;
+}
+.chat-dtls-wrapper {
+    padding: 16px 30px;
+    border-bottom: dashed 1px #adadad;
+}
+.wrapper-other-chat .chat-dtls-wrapper:last-child {
+    border-bottom: 0;
+}
+.chat-dtls-img{
+    max-width: 50px;
+    flex: 0 0 50px;
+    padding-right: 10px; 
+}
+.chat-dtls{
+    max-width:calc(100% - 60px);
+    flex: 0 0 calc(100% - 60px);
+}
+.chat-box {
+    padding: 30px 30px;
+}
+.chat-box textarea{
+    width: 100%;
+    border:solid 1px #a6a6a6;
+    padding: 12px 20px;
+}
+@media screen and (max-width: 1300px){
+    .chat-user {
+        max-width: 350px;
+        flex: 0 0 350px;
+    }
+    .chat-details {
+        max-width: calc(100% - 350px);
+        flex-basis: calc(100% - 350px);
+    }
+    .each-user-wrapper li {
+        padding: 15px 10px;
+    }
+    #wrapper .chat-details-inner .subTitle {
+        padding: 0 20px;
+    }
+    .chat-dtls-wrapper {
+        padding: 16px 20px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .chat-user {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    .chat-details {
+        max-width: 100%;
+        flex-basis: 100%;
+    }   
+    .each-user-wrapper,
+    .wrapper-other-chat{
+        min-height: 100px;
+        overflow: auto;
+        max-height: 350px;
+    }
+}
+/*Message Style E
+---------------------------*/

@@ -25,6 +25,9 @@
 .agree-check .box-checkbox{
 	border: solid 2px #000000;
 }
+.agree-check .checkbox-wrapper input[type=checkbox]:checked + .right-checkbox{
+	border: solid 2px #000000;
+} 
 .agree-check .checkbox-wrapper label {
     color: #292e34;
     font-weight: 600;

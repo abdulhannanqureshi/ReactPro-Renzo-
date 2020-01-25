@@ -10,6 +10,7 @@ import ProductDetails from './component/product/ProductDetails';
 import ProductList from './component/product/ProductList'; 
 import Wishlist from './component/userAdmin/Wishlist'; 
 import ChangePassword from './component/userAdmin/ChangePassword'; 
+import Message from './component/userAdmin/Message'; 
 import BankDetails from './component/userAdmin/BankDetails'; 
 import Profile from './component/userAdmin/Profile'; 
 import Order from './component/userAdmin/Order'; 
@@ -19,7 +20,16 @@ import AgreementUpload from './component/postListing/AgreementUpload';
 import PostListing from './component/postListing/PostListing'; 
 import ProductSummary from './component/postListing/ProductSummary'; 
 import ProductSubmitted from './component/postListing/ProductSubmitted'; 
-
+import ShippingInfo from './component/checkout/ShippingInfo'; 
+import CheckoutPayment from './component/checkout/CheckoutPayment'; 
+import CheckoutCart from './component/checkout/CheckoutCart'; 
+import PaymentFailed from './component/PaymentStatus/PaymentFailed'; 
+import OrderSuccess from './component/PaymentStatus/OrderSuccess'; 
+import ErrorSms from './component/PaymentStatus/ErrorSms'; 
+import Agreement from './component/Agreement/Agreement'; 
+import Contactus from './component/Contactus/Contactus'; 
+import Faq from './component/ForUser/Faq'; 
+  
 
 class Routing extends React.Component {
 render() {
@@ -45,7 +55,17 @@ render() {
 	    	<Route path="/postlisting" component={PostListing} />
 	    	<Route path="/productsummary" component={ProductSummary} />
 	    	<Route path="/productsubmitted" component={ProductSubmitted} />
-	    </div>
+	    	<Route path="/shippinginfo" component={ShippingInfo} />
+	    	<Route path="/checkoutpayment" component={CheckoutPayment} />
+	    	<Route path="/checkoutcart" component={CheckoutCart} />
+	    	<Route path="/paymentfailed" component={PaymentFailed} />
+	    	<Route path="/ordersuccess" component={OrderSuccess} />
+	    	<Route path="/error" component={ErrorSms} />
+	    	<Route path="/agreement" component={Agreement} />
+	    	<Route path="/contactus" component={Contactus} />
+	    	<Route path="/faq" component={Faq} />
+	    	<Route path="/message" component={Message} />
+	    </div> 
 	</Router> 
   );
 }

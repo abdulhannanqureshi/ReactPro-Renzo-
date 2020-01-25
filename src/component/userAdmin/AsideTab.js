@@ -40,6 +40,11 @@ render() {
                         <img src="assets/img/icon/icon_pass.png" alt="Change password " /> Change Password
                     </NavLink>
                 </li>
+                <li>
+                    <NavLink activeClassName="active"  to={'/message'}> 
+                        <img src="assets/img/icon/icon_message.png" alt="Message " /> My Messages
+                    </NavLink>
+                </li>
             </ul>
         </div>
     </section>   

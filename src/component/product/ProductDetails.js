@@ -5,6 +5,7 @@ import './style.css';
 import { Link } from 'react-router-dom';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
+import Modal from 'react-bootstrap/Modal'
 
 import {
   Magnifier,
@@ -16,8 +17,24 @@ import {
 } from "react-image-magnifiers";
 
 class ProductDetails extends React.Component{
-
-
+    constructor(props){
+        super(props);
+        this.state = {
+            show: false
+        }
+        this.handleShow = this.handleShow.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+    }
+    handleShow(){
+       this.setState({
+            show: true
+       });
+    }
+    handleClose(){
+        this.setState({
+            show: false
+       });
+    }
 render() {
   return ( 
   <div>
@@ -91,9 +108,9 @@ render() {
                             <div className="datepicker-wrapper">
                                 <input type="text" placeholder="Delivery Date" />
                                 <input type="text" placeholder="Pickup Date" />
-                            </div>
+                            </div> 
                             <p className="product-not-sms m-bottom-50">*Sorry! The product is not available for these dates.</p>
-                            <p><Link to={'/'} className="common-btn-rds">Rent Now</Link></p>
+                            <p><button className="common-btn-rds" onClick={this.handleShow}>Rent Now</button></p>
                         </div>
                     </div>
                 </div>
@@ -471,9 +488,34 @@ render() {
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        
+            </div>   
+        </section>  
+        <div className="">
+            <Modal className="modal-wrapper" size="lg" show={this.state.show} onHide={this.handleClose}>
+                <Modal.Header closeButton>
+                  <Modal.Title> 
+                        <div className="text-center">
+                            <h2 className="title font-size-28 font-w-600">SEND A MESSAGE</h2>
+                            <p className="title-desc font-size-16">You can track your messages in My Messages section in your account.</p>
+                            <p><img src="assets/img/icon/icon_title.png" alt="Icon Title" /></p>
+                        </div>
+                  </Modal.Title>
+                </Modal.Header> 
+                <Modal.Body>  
+                    <div className="form-wrapper m-top-10">
+                        <form action="">
+                           <div className="form-group m-bottom-20">
+                                <label>WRITE YOUR MESSAGE HERE</label>
+                                <textarea name="message" id="message" cols="30" rows="10" className="form-control" placeholder="Type a Message"></textarea>
+                            </div>
+                            <div className="text-center">
+                                <Link to={'/'} className="another-common-btn btn-increase-width">Send Message</Link>
+                            </div>
+                        </form>
+                    </div>
+                </Modal.Body>
+            </Modal>
+        </div>
     </div>
     <Footer />
   </div>

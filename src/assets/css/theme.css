@@ -948,6 +948,11 @@ br{
     font-weight: 500;
     text-align: justify;
 }
+.common-text2 {
+    font-size: 20px;
+    line-height: 1.7;
+    font-weight: 500;
+}
 .small-common-text{
     font-size: 15px;
     line-height: 1.7;
@@ -1003,11 +1008,12 @@ br{
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-.full-btn:hover,
-.full-btn:focus {
+#wrapper .full-btn:hover,
+#wrapper .full-btn:focus {
     text-decoration: none;
     outline: 0;
-}
+    color: #292e34;
+} 
 .btn-wrapper-center {
 	text-align: center;
 }
@@ -1028,13 +1034,23 @@ br{
     text-align: center;
     text-transform: uppercase;
 }
+.drk-btn.another-common-btn {
+	background: #292e34;
+	color: #fff;
+}
 #wrapper .another-common-btn:hover{
     background: linear-gradient(to right,#ffd802, #fcd467);
     color: #292e34;
     text-decoration: none;
 }
+.btn-width-150{
+    min-width: 150px;
+}
 .btn-increase-width{
     min-width: 450px;
+}
+.btn-increase-width1{
+    min-width: 300px;
 }
 .step-btn{
  	display: inline-block;
@@ -1090,6 +1106,12 @@ br{
 .f-w-500{
 	font-weight: 500 !important;
 }
+.f-w-600{
+	font-weight: 600 !important;
+}
+.f-w-bold{
+	font-weight: bold !important;
+}
 .rat-tagline{
 	display: block;
 	font-size: 13px;
@@ -1108,9 +1130,6 @@ br{
 .custom-dropdown .dropdown-menu {
     border-radius: 0;
 }
-.width-150{
-	width: 150px;
-}
 .custome-upload{
     position: relative;
 }
@@ -1124,6 +1143,157 @@ br{
     opacity: 0;
 	cursor: pointer;
 }
+.cutome-badge {
+    width: 22px;
+    height: 22px;
+    background: #fcd469;
+    border-radius: 50%;
+    text-align: center;
+    color: #292e34;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 600;
+}
+.remove-bdr-rds{
+	border-radius: 0 !important; 
+}
+/* Width Style S
+----------------------------*/
+.imgWidth {
+    width: 18px;
+}
+.width-150{
+	width: 150px;
+}
+.width-full{
+	width: 100%;
+}
+.width-170{
+	max-width: 170px !important;
+    flex: 0 0 170px !important;
+}
+.width-rem-170{
+	max-width: calc(100% - 170px) !important;
+    flex-basis: calc(100% - 170px) !important;	
+}
+.width-300{
+	max-width: 300px !important;
+    flex: 0 0 300px !important;
+}
+.width-rem-300{
+	max-width: calc(100% - 300px) !important;
+    flex-basis: calc(100% - 300px) !important;	
+}
+.width-120{
+	max-width: 120px !important;
+    flex: 0 0 120px !important;
+}
+.width-rem-120{
+	max-width: calc(100% - 120px) !important;
+    flex-basis: calc(100% - 120px) !important;	
+}
+@media screen and (max-width: 576px){
+	.width-120{
+		max-width: 60px !important;
+	    flex: 0 0 60px !important;
+	}
+	.width-rem-120{
+		max-width: calc(100% - 60px) !important;
+	    flex-basis: calc(100% - 60px) !important;	
+	}		
+}
+/* Width Style E
+----------------------------*/
+/****************************/
+/* Height Style S
+----------------------------*/
+.height-full {
+	height: 100%;
+}
+/* Height Style E
+----------------------------*/
+/****************************/
+/* Radius Style S
+----------------------------*/
+.radius-8{
+	border-radius: 8px;
+}
+/* Radius Style E
+----------------------------*/
+/****************************/
+/* Image Responsive Style S
+----------------------------*/
+.img-responsive1{
+	height: 130px;
+    width: 100%;
+    object-fit: cover;
+}
+/* Image Responsive Style E
+----------------------------*/
+/****************************/
+/* Border Style S
+----------------------------*/
+.bdr-btm{
+	border-bottom: solid 1px #eaeaea;
+}
+/* Border Style E
+----------------------------*/
+/****************************/
+/*Table Style S
+----------------------------*/
+.common-tbl{
+	width: 100%;
+}
+.common-tbl tr th,
+.common-tbl tr td{
+	font-weight: 500;
+    padding: 0 0 15px;
+}
+.common-tbl tr:last-child th,
+.common-tbl tr:last-child td{
+	padding-bottom: 0;
+}
+/*Table Style E
+----------------------------*/
+/****************************/
+/*Modal Style S
+----------------------------*/
+.modal-wrapper.modal{
+	z-index: 9999;
+}
+.modal-wrapper .modal-title{
+	width: 100%;
+	padding-top: 15px;
+} 
+.modal-wrapper .modal-content{
+	padding: 0 0 50px; 
+	border-radius: 16px;
+}
+.modal-wrapper .modal-header{
+	border-bottom: 0 ;
+}
+.modal-wrapper .modal-body{
+	padding: 0 100px ;
+}
+.modal-wrapper .modal-header .close {
+    background: #fcd469;
+    opacity: 1;
+    border-radius: 50%;
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    margin: -10px -10px 0 0;
+}
+ .modal-wrapper .modal-header .close span{
+	line-height: 20px;
+    font-size: 30px;
+ 	display: inline-block;
+ }   
+/*Modal Style E
+----------------------------*/
+/****************************/
+/*Common Responsive S
+----------------------------*/
 @media screen and (max-width: 1199px){
 	.common-btn {
 	    font-size: 14px;
@@ -1217,6 +1387,13 @@ br{
 .clr-rioja{
 	color: #60c308;
 }
+.clr-common{
+	color: #292e34 !important;
+}
+.clr-gray{
+	color: #959698;
+}
+
 /*Color E
 ----------------------*/
 /*****************************/
@@ -1906,22 +2083,25 @@ br{
 #wrapper .font-size-12{
 	font-size: 12px;
 }
-.font-size-13{
+#wrapper .font-size-13{
 	font-size: 13px;
 }
 #wrapper .font-size-14{
 	font-size: 14px;
 }
-.font-size-15{
+#wrapper .font-size-15{
 	font-size: 15px;
+}
+#wrapper .font-size-16{
+	font-size: 16px;
 }
 .font-size-16{
 	font-size: 16px;
 }
-.font-size-17{
+#wrapper .font-size-17{
 	font-size: 17px;
 }
-.font-size-18{
+#wrapper .font-size-18{
 	font-size: 18px;
 }
 .font-size-19{
@@ -2013,6 +2193,9 @@ br{
 }
 /* !Padding & Margin
 ---------------------------------------------------------- */
+.m-top-10{
+	margin-top:10px !important;
+}
 #wrapper .m-top-10{
 	margin-top:10px;
 }
@@ -2046,7 +2229,10 @@ br{
 /* !Margin Bottom
 ---------------------------------------------------------- */
 #wrapper .m-bottom-0{
-	margin-bottom:0;
+	margin-bottom:0 !important;
+}
+#wrapper .m-bottom-5{
+	margin-bottom:5px;
 }
 #wrapper .m-bottom-10{
 	margin-bottom:10px;
@@ -2077,6 +2263,12 @@ br{
 }
 #wrapper .m-bottom-100{
 	margin-bottom:100px;
+}
+#wrapper .m-bottom-150{
+	margin-bottom:150px;
+}
+#wrapper .m-bottom-200{
+	margin-bottom:200px;
 }
 /* !Margin left
 ---------------------------------------------------------- */
@@ -2112,6 +2304,9 @@ br{
 }
 /* !Margin Right
 ---------------------------------------------------------- */
+#wrapper .m-right-5{
+	margin-right:5px;
+}
 #wrapper .m-right-10{
 	margin-right:10px;
 }
@@ -2344,6 +2539,12 @@ br{
 }
 #wrapper .m-bottom-100{
 	margin-bottom:50px;
+}
+#wrapper .m-bottom-150{
+	margin-bottom:75px;
+}
+#wrapper .m-bottom-200{
+	margin-bottom:100px;
 }
 /* !Margin left
 ---------------------------------------------------------- */

@@ -1,0 +1,53 @@
+/*Payment Failed Style S
+---------------------------*/
+.payment-sms{
+	text-align: center;
+	margin-bottom: 100px;
+	padding: 0 20px;
+}
+.img-payment {
+    width: 350px;
+    margin: 50px 0;
+}
+@media screen and (max-width: 991px){
+	.payment-sms {
+	    margin-bottom: 50px;
+    }
+	.img-payment {
+    	width: 280px;
+    	margin: 30px 0;
+	}
+}
+@media screen and (max-width: 767px){
+	.payment-sms {
+	    margin-bottom: 30px;
+    }
+	.img-payment {
+    	width: 200px;
+    	margin: 20px 0;
+	}
+}
+/*Payment Failed Style E
+----------------------------*/
+/****************************/
+/*404 Page Style S
+----------------------------*/
+.ErrorPage {
+    text-align: center;
+    padding-bottom: 80px;
+    padding-top: 30px;
+    background:#fcd469 url('/assets/img/image/bg_error.png') repeat-x;
+}
+@media screen and (max-width: 1200px){
+	.ErrorPage {
+    	padding-top: 20px;
+    }
+}
+@media screen and (max-width: 991px){
+	.ErrorPage {
+    	padding-top: 30px;
+    	padding-bottom: 50px;
+    }
+}
+/*404 Page Style E
+----------------------------*/

@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../core/Header';
 import Footer from '../core/Footer';
-import { Link } from 'react-router-dom';
 import './style.css';
 
 class ProductSubmitted extends React.Component{
