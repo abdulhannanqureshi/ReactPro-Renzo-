@@ -14,7 +14,7 @@ render() {
     <Header />
     <div className="wishlist-wrapper article-wrapper">
         <section className="product-list-wrapper">
-            <div className="">
+            <div className="container">
                 <div className="custom-row">
                     <div className="aside">
                         <AsideTab />
@@ -25,7 +25,7 @@ render() {
                                 <h2 className="title font-size-30">Wishlist</h2>
                                 <p className="title-desc">Here are your wishlisted products</p>
                             </div>
-                            <div className="col-md-12 col-lg-6 col-xl-4">
+                            <div className="col-md-12 col-lg-6">
                                 <div className="product-list">
                                     <div className="product-img only-img-slider">
                                         <label className="img-label">5km away</label>
@@ -58,13 +58,13 @@ render() {
                                     <div className="rent-details">
                                         <p><span>Luxury watches</span> starting at Rs 700</p>
                                         <div className="btn-wrapper">
-                                            <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
-                                            <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
+                                            <Link className="common-btn-rds" to={'/'}>Rent Now </Link>
+                                            <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart_active.png" alt="Wish List" /> </Link>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-12 col-lg-6 col-xl-4">
+                            <div className="col-md-12 col-lg-6">
                                 <div className="product-list">
                                     <div className="product-img only-img-slider">
                                         <label className="img-label">5km away</label>
@@ -97,13 +97,13 @@ render() {
                                     <div className="rent-details">
                                         <p><span>Luxury watches</span> starting at Rs 700</p>
                                         <div className="btn-wrapper">
-                                            <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
-                                            <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
+                                            <Link className="common-btn-rds" to={'/'}>Rent Now </Link>
+                                            <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart_active.png" alt="Wish List" /> </Link>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-12 col-lg-6 col-xl-4">
+                            <div className="col-md-12 col-lg-6">
                                 <div className="product-list">
                                     <div className="product-img only-img-slider">
                                         <label className="img-label">5km away</label>
@@ -136,13 +136,13 @@ render() {
                                     <div className="rent-details">
                                         <p><span>Luxury watches</span> starting at Rs 700</p>
                                         <div className="btn-wrapper">
-                                            <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
-                                            <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
+                                            <Link className="common-btn-rds" to={'/'}>Rent Now </Link>
+                                            <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart_active.png" alt="Wish List" /> </Link>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-12 col-lg-6 col-xl-4">
+                            <div className="col-md-12 col-lg-6">
                                 <div className="product-list">
                                     <div className="product-img only-img-slider">
                                         <label className="img-label">5km away</label>
@@ -175,13 +175,13 @@ render() {
                                     <div className="rent-details">
                                         <p><span>Luxury watches</span> starting at Rs 700</p>
                                         <div className="btn-wrapper">
-                                            <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
-                                            <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
+                                            <Link className="common-btn-rds" to={'/'}>Rent Now </Link>
+                                            <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart_active.png" alt="Wish List" /> </Link>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-12 col-lg-6 col-xl-4">
+                            <div className="col-md-12 col-lg-6">
                                 <div className="product-list">
                                     <div className="product-img only-img-slider">
                                         <label className="img-label">5km away</label>
@@ -214,8 +214,8 @@ render() {
                                     <div className="rent-details">
                                         <p><span>Luxury watches</span> starting at Rs 700</p>
                                         <div className="btn-wrapper">
-                                            <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
-                                            <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
+                                            <Link className="common-btn-rds" to={'/'}>Rent Now </Link>
+                                            <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart_active.png" alt="Wish List" /> </Link>
                                         </div>
                                     </div>
                                 </div>

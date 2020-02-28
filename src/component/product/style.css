@@ -1,5 +1,100 @@
-/*wishlist Style S
+/*Product Style S
 ---------------------------*/
+.product-details-img {
+    line-height: initial;
+    width: 100%;
+    object-fit: contain;
+    height: 477px;
+    background: #d8e0e0;
+}
+.wrapper-box1 .product-list{
+	margin-bottom: 30px;
+}
 
-/*wishlist Style E
+input[type="range"]::-moz-range-progress {
+  background-color: #43e5f7; 
+}
+input[type="range"]::-moz-range-track {  
+  background-color: #9a905d;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  background-color: #43e5f7; 
+}
+input[type="range"]::-ms-fill-upper {  
+  background-color: #9a905d;
+}
+.rangeTooltip .rangeslider-horizontal {
+    height: 8px;
+    background: #dddede;
+    box-shadow: none;
+    margin: 0 0 10px;
+}
+.rangeTooltip .rangeslider-horizontal .rangeslider__fill {
+    background: #dddede;
+    box-shadow: none;
+}
+.rangeTooltip .rangeslider-horizontal .rangeslider__handle {
+    width: 22px;
+    height: 22px;
+    box-shadow: 0 0 3px #cabbbb;
+    outline: 0;
+}
+.rangeTooltip .rangeslider-horizontal .rangeslider__handle:after {
+    content: ' ';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #fcd469;
+    box-shadow: none;
+}
+.rangetooltip-wrapper .rangeslider__handle-tooltip {
+    background-color: #fff !important;
+    font-size: 12px !important;
+    width: auto !important;
+    height: auto !important;
+    color: #242a31 !important;
+    z-index: 999;
+    min-width: 40px;
+    padding: 0 5px;
+    box-shadow: 0 0 3px #baa;
+}
+.rangetooltip-wrapper  .rangeslider-horizontal .rangeslider__handle-tooltip:after{
+	border-top:solid 8px #dae4e4 !important;
+}
+.rangetooltip-wrapper  .rangeslider-horizontal .rangeslider__handle-tooltip {
+    top: -42px !important;
+}
+.rangetooltip-wrapper .is-open+.Collapsible__contentOuter{
+    overflow: visible !important;
+}
+.category-wrapper .rang-wrapper.only-range {
+    margin: 0;
+    padding-top: 12px;
+    background: transparent;
+}
+@media screen and (max-width: 1199px){
+	.product-details-img {
+	    height: 415px;
+	}
+	.product-img1.only-img-slider.slider-wrapper1{
+		max-width: 600px;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 767px){
+	.product-details-img {
+	    height: 360px;
+	}
+}
+@media screen and (max-width: 576px){
+	.product-details-img {
+	    height: 250px;
+	}
+}
+/*Product Style E
 ---------------------------*/

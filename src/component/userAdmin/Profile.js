@@ -1,18 +1,18 @@
 import React from 'react';
-import Header from '../core/Header';
+import HeaderLogin from '../core/HeaderLogin';
 import Footer from '../core/Footer';
 import AsideTab from './AsideTab';
 import './style.css';
 
 class Profile extends React.Component{
 
-render() {
+render() { 
   return ( 
   <div>
-    <Header />
+    <HeaderLogin />
     <div className="wishlist-wrapper article-wrapper">
         <section className="product-list-wrapper">
-            <div className="">
+            <div className="container">
                 <div className="custom-row">
                     <div className="aside">
                         <AsideTab />
@@ -21,9 +21,16 @@ render() {
                         <form action="">
                             <div className="row relevent-pro cate-product-list">
                                 <div className="col-sm-12">
-                                    <h2 className="title font-size-30">Personal Information</h2>
-                                    <p className="title-desc">Update your information here</p>
-                                    <p className="m-bottom-30"><img src="assets/img/icon/icon_title.png" alt="Icon Title" /></p>
+                                    <div className="getVerified datepicker-wrapper">
+                                        <div>
+                                            <h2 className="title font-size-30">Personal Information</h2>
+                                            <p className="title-desc">Update your information here</p>
+                                            <p className="m-bottom-30"><img src="assets/img/icon/icon_title.png" alt="Icon Title" /></p>
+                                        </div>
+                                        <div className="sp-right">
+                                            <button className="another-common-btn small-btn">Get Verified</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="form-wrapper-another">
@@ -72,7 +79,7 @@ render() {
                                     <div className="col-sm-12">
                                         <div className="btn-wrapper-center m-top-60">
                                             <button type="submit" className="another-common-btn">Save</button>
-                                            <button type="reset" className="another-common-btn">Cancle</button>
+                                            <button type="reset" className="another-common-btn">Cancel</button>
                                         </div>
                                     </div>
                                 </div>

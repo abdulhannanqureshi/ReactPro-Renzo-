@@ -31,7 +31,7 @@ render() {
                 <div className="row information-review dashed-img-2">
                     <div className="col-md-9 sp-order">
                         <div className="m-top-40">
-                            <h3 className="title-drop m-bottom-10">ITEM GETS APPROVED</h3>
+                            <h3 className="title-drop m-bottom-10">Item Gets Approved</h3>
                             <p className="small-common-text">Your item is now eligible to go on Orders You will be able to access the items and pricing frorn My Items Tab</p>
                         </div>
                     </div>
@@ -45,7 +45,7 @@ render() {
                     </div>
                     <div className="col-md-9">
                         <div className="m-top-40">
-                            <h3 className="title-drop m-bottom-10">RECEIVE ORDERS</h3>
+                            <h3 className="title-drop m-bottom-10"> Receive Orders</h3>
                             <p className="small-common-text">You will be notified via SMS & email each time your item is booked. Renzo will pickup your items a day prior to the order date.</p>
                         </div>
                     </div>

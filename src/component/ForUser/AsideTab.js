@@ -11,19 +11,19 @@ render() {
         <div>
              <ul>
                 <li>
-                    <NavLink activeClassName="active"  to={'/'}>Renting</NavLink>
+                    <NavLink activeClassName="active"  to={'/faq'}>Renting</NavLink>
                 </li>
                 <li>
-                    <NavLink to={'/'}> Delivery</NavLink>
+                    <NavLink activeClassName="active" to={'/faqdelivery'}> Delivery</NavLink>
                 </li>
                 <li>
-                    <NavLink to={'/'}> Post a Listing</NavLink>
+                    <NavLink activeClassName="active" to={'/faqpost'}> Post a Listing</NavLink>
                 </li>
                 <li>
-                    <NavLink to={'/'}> Payments</NavLink>
+                    <NavLink activeClassName="active" to={'/faqpayments'}> Payments</NavLink>
                 </li>
                 <li>
-                    <NavLink to={'/'}> Cancellations</NavLink>
+                    <NavLink activeClassName="active" to={'/faqcancellations'}> Cancellations</NavLink>
                 </li>
             </ul>
         </div>

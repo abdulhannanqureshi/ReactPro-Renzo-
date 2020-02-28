@@ -8,16 +8,36 @@ import Collapsible from 'react-collapsible';
 import AliceCarousel from 'react-alice-carousel'
 import "react-alice-carousel/lib/alice-carousel.css";
 
-class ProductList extends React.Component{
+import Slider from 'react-rangeslider'
+import 'react-rangeslider/lib/index.css'
 
+class ProductList extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            rangeValue: 3,
+            volume: 0
+        }
+    }
     responsive = {
         0: { 
             items: 1,
             itemsInSlide: 1 
         }
     }
-
+    handleChange(event, index) {
+        const { rangeValue } = this.state;
+        this.setState({ rangeValue: event.target.value});
+    }
+    handleOnChange = (value) => {
+        this.setState({
+            volume: value 
+        })
+    }
 render() {
+    const { value } = this.state;
+    const { label } = this.props;
+    let { volume } = this.state
   return ( 
   <div>
     <Header />
@@ -31,7 +51,7 @@ render() {
                                 <img src="assets/img/icon/icon_rent.png" alt="Rent Icon"/>
                             </div>
                             <div className="product-det">
-                                <h3 className="small-title">RENT</h3>
+                                <h3 className="small-title">Rent</h3>
                                 <p className="product-det-text">Browse & order <br/> online.</p>
                             </div>
                         </div>
@@ -42,7 +62,7 @@ render() {
                                 <img src="assets/img/icon/icon_own.png" alt="Own Icon"/>
                             </div>
                             <div className="product-det">
-                                <h3 className="small-title">OWn</h3>
+                                <h3 className="small-title">Own</h3>
                                 <p className="product-det-text">Own the item for <br/>a day, a week or <br/>a month.</p>
                             </div>
                         </div>
@@ -90,7 +110,14 @@ render() {
                             <Collapsible trigger="rental tenure">
                                 <div className="rang-wrapper">
                                     <div>
-                                        <input type="range" min="1" max="100"  className="rangeSlider" id="myRange" />
+                                        <input 
+                                            type="range" 
+                                            min={0}
+                                            max={2}
+                                            step={1}
+                                            value={value}
+                                            onChange={this.handleChange.bind(this)} 
+                                            className="rangeSlider" id="myRange" />
                                     </div>
                                     <ul className="week-amount">
                                         <li><p>Daily</p></li>
@@ -124,18 +151,25 @@ render() {
                             </Collapsible>
                             <input type="text" placeholder="Search City" className="search-field infilter-search" /> 
                         </div>
-                        <div className="category-wrapper">
+                        <div className="category-wrapper rangetooltip-wrapper">
                             <Collapsible trigger="Distance">
                                 <div className="rang-wrapper only-range">
-                                    <div className="">
-                                        <input type="range" min="1" max="100"  className="rangeSlider" id="myRange" />
+                                    <div className="rangeTooltip">
+                                        <Slider
+                                            value={volume} 
+                                            orientation="horizontal"
+                                            onChange={this.handleOnChange}
+                                            min={0}
+                                            max={100}
+                                            format={value => <div>{value}km</div>}
+                                          />
                                     </div>
                                 </div>
-                            </Collapsible>
+                            </Collapsible> 
                         </div>
                     </div>
                     <div className="main">
-                        <div className="row m-bottom-20">
+                        <div className="row m-bottom-10">
                             <div className="col-md-7 col-lg-9">
                                 <div className="breadcrumb-wrapper">
                                     <ul>
@@ -216,7 +250,7 @@ render() {
                                     <div className="rent-details">
                                         <p><span>Luxury watches</span> starting at Rs 700</p>
                                         <div className="btn-wrapper">
-                                            <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
+                                            <Link className="common-btn-rds" to={'/productdetails'}>Rent Now </Link>
                                             <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
                                         </div>
                                     </div>
@@ -278,7 +312,7 @@ render() {
                                     <div className="rent-details">
                                         <p><span>Luxury watches</span> starting at Rs 700</p>
                                         <div className="btn-wrapper">
-                                            <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
+                                            <Link className="common-btn-rds" to={'/productdetails'}>Rent Now </Link>
                                             <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
                                         </div>
                                     </div>
@@ -340,7 +374,7 @@ render() {
                                     <div className="rent-details">
                                         <p><span>Luxury watches</span> starting at Rs 700</p>
                                         <div className="btn-wrapper">
-                                            <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
+                                            <Link className="common-btn-rds" to={'/productdetails'}>Rent Now </Link>
                                             <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
                                         </div>
                                     </div>
@@ -402,7 +436,7 @@ render() {
                                     <div className="rent-details">
                                         <p><span>Luxury watches</span> starting at Rs 700</p>
                                         <div className="btn-wrapper">
-                                            <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
+                                            <Link className="common-btn-rds" to={'/productdetails'}>Rent Now </Link>
                                             <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
                                         </div>
                                     </div>
@@ -464,7 +498,7 @@ render() {
                                     <div className="rent-details">
                                         <p><span>Luxury watches</span> starting at Rs 700</p>
                                         <div className="btn-wrapper">
-                                            <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
+                                            <Link className="common-btn-rds" to={'/productdetails'}>Rent Now </Link>
                                             <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
                                         </div>
                                     </div>
@@ -526,7 +560,7 @@ render() {
                                     <div className="rent-details">
                                         <p><span>Luxury watches</span> starting at Rs 700</p>
                                         <div className="btn-wrapper">
-                                            <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
+                                            <Link className="common-btn-rds" to={'/productdetails'}>Rent Now </Link>
                                             <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
                                         </div>
                                     </div>
@@ -588,7 +622,7 @@ render() {
                                     <div className="rent-details">
                                         <p><span>Luxury watches</span> starting at Rs 700</p>
                                         <div className="btn-wrapper">
-                                            <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
+                                            <Link className="common-btn-rds" to={'/productdetails'}>Rent Now </Link>
                                             <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
                                         </div>
                                     </div>
@@ -650,7 +684,7 @@ render() {
                                     <div className="rent-details">
                                         <p><span>Luxury watches</span> starting at Rs 700</p>
                                         <div className="btn-wrapper">
-                                            <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
+                                            <Link className="common-btn-rds" to={'/productdetails'}>Rent Now </Link>
                                             <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
                                         </div>
                                     </div>
@@ -712,7 +746,7 @@ render() {
                                     <div className="rent-details">
                                         <p><span>Luxury watches</span> starting at Rs 700</p>
                                         <div className="btn-wrapper">
-                                            <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
+                                            <Link className="common-btn-rds" to={'/productdetails'}>Rent Now </Link>
                                             <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
                                         </div>
                                     </div>
@@ -774,7 +808,7 @@ render() {
                                     <div className="rent-details">
                                         <p><span>Luxury watches</span> starting at Rs 700</p>
                                         <div className="btn-wrapper">
-                                            <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
+                                            <Link className="common-btn-rds" to={'/productdetails'}>Rent Now </Link>
                                             <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
                                         </div>
                                     </div>
@@ -836,7 +870,7 @@ render() {
                                     <div className="rent-details">
                                         <p><span>Luxury watches</span> starting at Rs 700</p>
                                         <div className="btn-wrapper">
-                                            <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
+                                            <Link className="common-btn-rds" to={'/productdetails'}>Rent Now </Link>
                                             <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
                                         </div>
                                     </div>
@@ -898,7 +932,7 @@ render() {
                                     <div className="rent-details">
                                         <p><span>Luxury watches</span> starting at Rs 700</p>
                                         <div className="btn-wrapper">
-                                            <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
+                                            <Link className="common-btn-rds" to={'/productdetails'}>Rent Now </Link>
                                             <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
                                         </div>
                                     </div>

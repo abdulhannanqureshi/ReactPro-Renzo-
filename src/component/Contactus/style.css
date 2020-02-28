@@ -12,6 +12,14 @@
 .sp-m-b-30{
 	margin-bottom: 30px;
 }
+@media screen and (max-width: 767px){
+	.sp-order-1{
+		order: 1;
+	}
+	.contact-inner{
+		margin-bottom: 30px;
+	}
+}
 @media screen and (max-width: 576px){
 	.icon-contact {
 	    width: 50px;

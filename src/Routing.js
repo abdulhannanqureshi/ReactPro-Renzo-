@@ -14,6 +14,7 @@ import Message from './component/userAdmin/Message';
 import BankDetails from './component/userAdmin/BankDetails'; 
 import Profile from './component/userAdmin/Profile'; 
 import Order from './component/userAdmin/Order'; 
+import OrderDetails from './component/userAdmin/OrderDetails'; 
 import Item from './component/userAdmin/Item'; 
 import ProductAgreement from './component/postListing/ProductAgreement'; 
 import AgreementUpload from './component/postListing/AgreementUpload'; 
@@ -29,6 +30,12 @@ import ErrorSms from './component/PaymentStatus/ErrorSms';
 import Agreement from './component/Agreement/Agreement'; 
 import Contactus from './component/Contactus/Contactus'; 
 import Faq from './component/ForUser/Faq'; 
+import FaqDelivery from './component/ForUser/FaqDelivery'; 
+import FaqPost from './component/ForUser/FaqPost'; 
+import FaqPayments from './component/ForUser/FaqPayments'; 
+import FaqCancellations from './component/ForUser/FaqCancellations'; 
+import Blog from './component/Blog/Blog'; 
+import BlogDetails from './component/Blog/BlogDetails'; 
   
 
 class Routing extends React.Component {
@@ -49,6 +56,7 @@ render() {
 	    	<Route path="/bankdetails" component={BankDetails} />
 	    	<Route path="/profile" component={Profile} />
 	    	<Route path="/order" component={Order} />
+	    	<Route path="/orderdetails" component={OrderDetails} />
 	    	<Route path="/item" component={Item} />
 	    	<Route path="/productagreement" component={ProductAgreement} />
 	    	<Route path="/agreementupload" component={AgreementUpload} />
@@ -63,8 +71,14 @@ render() {
 	    	<Route path="/error" component={ErrorSms} />
 	    	<Route path="/agreement" component={Agreement} />
 	    	<Route path="/contactus" component={Contactus} />
-	    	<Route path="/faq" component={Faq} />
 	    	<Route path="/message" component={Message} />
+	    	<Route path="/faq" component={Faq} />
+	    	<Route path="/faqdelivery" component={FaqDelivery} />
+	    	<Route path="/faqpost" component={FaqPost} />
+	    	<Route path="/faqpayments" component={FaqPayments} />
+	    	<Route path="/faqcancellations" component={FaqCancellations} />
+	    	<Route path="/blog" component={Blog} />
+	    	<Route path="/blogdetails" component={BlogDetails} />
 	    </div> 
 	</Router> 
   );

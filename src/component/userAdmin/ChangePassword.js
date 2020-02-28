@@ -12,7 +12,7 @@ render() {
     <Header />
     <div className="wishlist-wrapper article-wrapper">
         <section className="product-list-wrapper">
-            <div className="">
+            <div className="container">
                 <div className="custom-row">
                     <div className="aside">
                         <AsideTab />
@@ -24,7 +24,7 @@ render() {
                                 <p className="title-desc">You can change your password here</p>
                                 <p className="m-bottom-30"><img src="assets/img/icon/icon_title.png" alt="Icon Title" /></p>
                             </div>
-                            <div className="col-sm-12 col-lg-10 col-xl-7">
+                            <div className="col-sm-12 col-lg-10 col-xl-10">
                                 <div className="form-wrapper-another">
                                     <form action="">
                                        <div className="form-group m-bottom-20">
@@ -41,7 +41,7 @@ render() {
                                         </div>
                                         <div className="btn-wrapper-center m-top-60">
                                             <button type="submit" className="another-common-btn">Save</button>
-                                            <button type="reset" className="another-common-btn">Cancle</button>
+                                            <button type="reset" className="another-common-btn">Cancel</button>
                                         </div>
                                     </form>
                                 </div>

@@ -75,7 +75,7 @@ render() {
                                 <div className="rent-details">
                                     <p><span>Bikes</span> starting at Rs 1000</p>
                                     <div className="btn-wrapper">
-                                        <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
+                                        <Link className="common-btn-rds" to={'/productlist'}>Rent Now </Link>
                                         <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
                                     </div>
                                 </div>
@@ -90,7 +90,7 @@ render() {
                                 <div className="rent-details">
                                     <p><span>Luxury watches</span> starting at Rs 700</p>
                                     <div className="btn-wrapper">
-                                        <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
+                                        <Link className="common-btn-rds" to={'/productlist'}>Rent Now </Link>
                                         <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart_active.png" alt="Wish List" /> </Link>
                                     </div>
                                 </div>
@@ -105,7 +105,7 @@ render() {
                                 <div className="rent-details">
                                     <p><span>Drone Cameras</span> starting at Rs 1000</p>
                                     <div className="btn-wrapper">
-                                        <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
+                                        <Link className="common-btn-rds" to={'/productlist'}>Rent Now </Link>
                                         <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
                                     </div>
                                 </div>

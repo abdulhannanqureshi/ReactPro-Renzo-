@@ -5,7 +5,7 @@ import AsideTab from './AsideTab';
 import './style.css';
 import Collapsible from 'react-collapsible';
 
-class Faq extends React.Component{
+class FaqCancellations extends React.Component{
 
 render() {
   return ( 
@@ -23,9 +23,17 @@ render() {
                     <div className="aside">
                         <AsideTab />
                     </div>
-                    <div className="main bank-details ">
+                    <div className="main bank-details " >
                         <div className="category-wrapper accordian-wrapper">
-                            <Collapsible trigger="The Renting question 1">
+                            <Collapsible trigger="The Cancellations question 1">
+                                <div className="m-top-10">
+                                    <p className="m-bottom-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero e</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                </div>
+                            </Collapsible> 
+                        </div>
+                        <div className="category-wrapper accordian-wrapper">
+                            <Collapsible trigger="The Cancellations question 2">
                                 <div className="m-top-10">
                                     <p className="m-bottom-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero e</p>
                                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
@@ -33,7 +41,7 @@ render() {
                             </Collapsible>
                         </div>
                         <div className="category-wrapper accordian-wrapper">
-                            <Collapsible trigger="The Renting question 2">
+                            <Collapsible trigger="The Cancellations question 3">
                                 <div className="m-top-10">
                                     <p className="m-bottom-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero e</p>
                                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
@@ -41,15 +49,7 @@ render() {
                             </Collapsible>
                         </div>
                         <div className="category-wrapper accordian-wrapper">
-                            <Collapsible trigger="The Renting question 3">
-                                <div className="m-top-10">
-                                    <p className="m-bottom-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero e</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                </div>
-                            </Collapsible>
-                        </div>
-                        <div className="category-wrapper accordian-wrapper">
-                            <Collapsible trigger="The Renting question 4">
+                            <Collapsible trigger="The Cancellations question 4">
                                 <div className="m-top-10">
                                     <p className="m-bottom-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero e</p>
                                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
@@ -57,7 +57,7 @@ render() {
                             </Collapsible>
                         </div>
                         <div className="category-wrapper accordian-wrapper"> 
-                            <Collapsible trigger="The Renting question 5">
+                            <Collapsible trigger="The Cancellations question 5">
                                 <div className="m-top-10">
                                     <p className="m-bottom-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero e</p>
                                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
@@ -76,4 +76,4 @@ render() {
   );
 }
 }
-export default Faq;
+export default FaqCancellations;

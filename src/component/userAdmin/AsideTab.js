@@ -22,12 +22,12 @@ render() {
                 </li>
                 <li>
                     <NavLink activeClassName="active"  to={'/item'}>
-                        <img src="assets/img/icon/icon_cube.png" alt="Item" /> My Items
+                        <img src="assets/img/icon/icon_cube.png" alt="Item" /> Listing Posted 
                     </NavLink>
                 </li>
                 <li>
                     <NavLink activeClassName="active"  to={'/order'}>
-                        <img src="assets/img/icon/icon_cart.png" alt="Cart" /> My Orders
+                        <img src="assets/img/icon/icon_cart.png" alt="Cart" /> Rented
                     </NavLink>
                 </li>
                 <li>

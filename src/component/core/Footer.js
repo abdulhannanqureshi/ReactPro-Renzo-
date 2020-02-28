@@ -2,8 +2,42 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class Footer extends React.Component{
+	constructor(props) {
+	    super(props);
+	    this.state = {
+	      is_visible: false
+	    };
+  	}
 
+
+ 	componentDidMount() {
+ 		var scrollComponent = this;
+	    document.addEventListener("scroll", function(e) {
+	      scrollComponent.toggleVisibility();
+	    });
+  	}
+
+  	toggleVisibility() {
+  		if (window.pageYOffset > 50) {
+	    	this.setState({
+	        	is_visible: true
+	      	});
+	    }
+	    else {
+	      	this.setState({
+	        	is_visible: false
+	      	});
+	    }
+  	}
+
+  	scrollToTop() {
+  		window.scrollTo({
+	    	top: 0,
+	      	behavior: "smooth"
+	    });
+  	}
 	render() {
+		const { is_visible } = this.state;
   	return (
     <footer className="footer">
     	<div className="inner-footer">
@@ -29,15 +63,15 @@ class Footer extends React.Component{
 						<h2 className="foot-title">Quick links</h2>
 						<ul className="footer-link">
 							<li><Link to={'/about'}>About Us</Link></li>
-							<li><Link to={'/'}>Blogs</Link></li>
-							<li><Link to={'/'}>Contact Us</Link></li>
-							<li><Link to={'/'}>FAQs</Link></li>
+							<li><Link to={'/blog'}>Blogs</Link></li>
+							<li><Link to={'/contactus'}>Contact Us</Link></li>
+							<li><Link to={'/faq'}>FAQs</Link></li>
 							<li><Link to={'/'}>Privacy Policy</Link></li>
-							<li><Link to={'/'}>Terms & Conditions</Link></li>
+							<li><Link to={'/agreement'}>Terms & Conditions</Link></li>
 						</ul>
 		    		</div>
 		    		<div className="col-md-4">
-		    			<h2 className="foot-title">Newsletter</h2>
+		    			<h2 className="foot-title">News Letter</h2>
 		    			<p className="foot-text">Get Our Latest Update In Your Email. Subscribe now to get 20% off on any product.</p>
 		    			<form>
 		    				<div className="subscribe-wrapper">
@@ -52,6 +86,13 @@ class Footer extends React.Component{
     	<div className="copyright">
     		©2019 Rental Marketplace. Copyrights Reserved by Quest Global Technologies.
     	</div>
+    	<div>
+	    	{is_visible && (
+		    	<div className="pageTop" onClick={() => this.scrollToTop()}>
+		    		<img src="assets/img/icon/icon_pagetop.png" alt="Page Top" />
+		    	</div>
+		    )}
+	    </div>
     </footer>		
   );
  }

@@ -6,7 +6,7 @@
 .form-wrapper-another .form-group label {
     font-size: 16px;
     font-weight: 300;
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin: 0 0 5px;
     color: #a7a7a7;
 }
@@ -16,11 +16,10 @@
     border-bottom: solid 1px #cccccc;
     border-radius: 0;
     padding: 0;
-    color: #33333;
+    color: #333333;
 }
-
 .form-wrapper-another .form-group input::placeholder{
-    color: #33333;
+    color: #333333;
 }
 /*Change Password Style E
 ---------------------------*/
@@ -29,6 +28,38 @@
 .bank-details{
     padding-left: 50px;
     padding-right: 70px;
+}
+.browse-field {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+.hide-field {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    height: 100%;
+    z-index: 99;
+    cursor: pointer;
+}
+#wrapper .browse-field p {
+    padding-bottom: 0px !important;
+    border-bottom: solid 1px #ccc;
+    line-height: 32px;
+    font-size: 16px;
+    padding: 0 12px 0 0;
+    width: calc(100% - 90px);
+}
+.browse-field button {
+    color: #292e34;
+    font-weight: 500;
+    background: #fdd642;
+    border: 0;
+    font-size: 15px;
+    padding: 6px 16px;
+    width: 90px;
 }
 @media screen and (max-width: 991px){
     .bank-details{
@@ -46,6 +77,15 @@
     .bank-details{
         padding-left: 15px;
         padding-right: 15px;
+    }
+    #wrapper .browse-field p {
+        font-size: 14px;
+        padding: 0 5px 0 0;
+        width: calc(100% - 80px); 
+    }
+    .browse-field button {
+        font-size: 14px;
+        width: 80px;
     }
 }
 /*Bank Details Style E
@@ -102,25 +142,30 @@
     font-size: 14px;
     min-width: 138px;
 }
-#wrapper .my-order .rating-wrapper {
+#wrapper .my-order .rating-wrapper,
+#wrapper .item-owned-img .rating-wrapper {
     padding: 2px 4px;
     bottom: 6px;
     right: 6px;
     border-radius: 12px;
 }
-#wrapper .my-order .product-img .rating-wrapper li:first-child {
+#wrapper .my-order .product-img .rating-wrapper li:first-child ,
+#wrapper .item-owned-img .rating-wrapper li:first-child {
     padding-left: 4px;
 }
-#wrapper .my-order .product-img .rating-wrapper li:last-child{
+#wrapper .my-order .product-img .rating-wrapper li:last-child,
+#wrapper .item-owned-img .rating-wrapper li:last-child{
     padding-right: 4px;
 }
-#wrapper .my-order .product-img .rating-wrapper li {
+#wrapper .my-order .product-img .rating-wrapper li ,
+#wrapper .item-owned-img .rating-wrapper li {
     background: #fff;
     margin: 0;
     padding: 0 1px;
     line-height: 20px;
 }
-#wrapper .my-order .rating-wrapper li img {
+#wrapper .my-order .rating-wrapper li img ,
+#wrapper .item-owned-img .rating-wrapper li img {
     width: 10px;
 }
 #wrapper .tab-my-order.wrapper-tabs-rds .nav.nav-tabs {
@@ -180,16 +225,16 @@
         padding: 12px 8px;
     }
     .item-img {
-        max-width: 136px;
-        flex: 0 0 136px;
+        max-width: 150px;
+        flex: 0 0 150px;
     }
     .item-details {
-        max-width: calc(100% - 136px);
-        flex-basis: calc(100% - 136px);
+        max-width: calc(100% - 150px);
+        flex-basis: calc(100% - 150px);
         padding: 16px 0 0 10px;
     }
     .item-img-inner img {
-        height: 160px;
+        height: 140px;
     }
     #wrapper .itemTitle {
         font-size: 16px;
@@ -209,26 +254,26 @@
     #wrapper .delivery-date {
         font-size: 13px;
     }
-    .item-img {
+   /* .item-img {
         max-width: 108px;
         flex: 0 0 108px;
     }
     .item-details {
         max-width: calc(100% - 108px);
         flex-basis: calc(100% - 108px);
-    }
+    }*/
     .item-img-inner img {
         height: 140px;
     }
 }
 @media screen and (max-width:1199px ){
     .item-img {
-        max-width: 150px;
-        flex: 0 0 150px;
+        max-width: 140px;
+        flex: 0 0 140px;
     }
     .item-details {
-        max-width: calc(100% - 150px);
-        flex-basis: calc(100% - 150px);
+        max-width: calc(100% - 140px);
+        flex-basis: calc(100% - 140px);
         padding: 16px 0 0 16px;
     }
 }
@@ -307,23 +352,23 @@
     padding: 22px 15px;
 }
 .item-owned-img {
-    max-width: 270px;
-    flex: 0 0 270px;
+    max-width: 150px;
+    flex: 0 0 150px;
 }
 .item-owned-img .product-img > img{
-    /*height: 200px;*/
+    height: 150px;
 }
 .item-owned-details{
-    max-width:calc(100% - 270px);
-    flex: 0 0 calc(100% - 270px);
-    padding-left: 20px; 
+    max-width:calc(100% - 150px);
+    flex: 0 0 calc(100% - 150px);
+    padding-left: 10px; 
 }
 .item-owned-details table{
     width: 100%;
 }
 .item-owned-details th,
 .item-owned-details td{
-    font-size: 17px;
+    font-size: 15px;
     padding-bottom: 5px;
 }
 .item-owned-details td{
@@ -336,7 +381,7 @@
     margin-top: 30px;
     padding-top: 30px;
     border-top: solid 1px #bebebe;
-    margin-right: 250px;
+    margin-right: 100px;
 }
 .table-wrapper th{
     vertical-align: top;
@@ -359,7 +404,7 @@
     }
 }
 @media screen and (max-width:1300px ){
-    .item-owned-img {
+    /*.item-owned-img {
         max-width: 220px;
         flex: 0 0 220px;
     }
@@ -367,10 +412,10 @@
         max-width: calc(100% - 220px);
         flex-basis: calc(100% - 220px);
         padding-left: 15px;
-    }
-    .item-owned-img .product-img > img {
+    }*/
+/*    .item-owned-img .product-img > img {
         height: 200px;
-    }
+    }*/
     .item-owned-details th, .item-owned-details td {
         font-size: 14px;
     }
@@ -457,6 +502,12 @@
         font-size: 12px;
     }
 }
+@media screen and (max-width:360px ){
+    .item-owned-details th,
+    .item-owned-details td {
+        font-size: 11px;
+    }
+}
 /*My Order Details Style E
 ---------------------------*/
 /**************************/
@@ -467,12 +518,12 @@
     height: 100%;
 }
 .chat-user {
-    max-width: 380px;
-    flex: 0 0 380px;
+    max-width: 300px;
+    flex: 0 0 300px;
 }
 .chat-details{
-    max-width: calc(100% - 380px);
-    flex: 0 0 calc(100% - 380px);    
+    max-width: calc(100% - 300px);
+    flex: 0 0 calc(100% - 300px);    
 }
 .chat-filter {
     padding: 20px 30px;
@@ -492,26 +543,26 @@
 }
 .each-user-wrapper li{
     border-bottom: solid 1px #e1e1e1;
-    padding:15px;
+    padding:15px 10px;
 }
 .each-user-wrapper li.active,
 .each-user-wrapper li:hover{
     background: #edeaea;
 }
 .each-user-img {
-    max-width: 70px;
-    flex: 0 0 70px;
+    max-width: 52px;
+    flex: 0 0 52px;
     padding-right: 10px;
 }
-.each-user-img img {
-    height: 56px;
+.each-user-img img { 
+    height: 42px;
     border-radius: 50%;
-    width: 56px;
+    width: 42px;
     object-fit: cover;
 }
 .each-user-detail{
-    max-width:calc(100% - 70px);
-    flex: 0 0 calc(100% - 70px);
+    max-width:calc(100% - 52px);
+    flex: 0 0 calc(100% - 52px);
 }
 .each-user-wrapper li a{
     display: block;
@@ -522,13 +573,13 @@
     text-decoration: none;
 }
 .chat-details-inner{
-    padding: 30px 0;
+    padding: 22px 0;
 }
 #wrapper .chat-details-inner .subTitle{
-    padding: 0 30px;
+    padding: 0 20px;
 }
 .chat-dtls-wrapper {
-    padding: 16px 30px;
+    padding: 16px 20px;
     border-bottom: dashed 1px #adadad;
 }
 .wrapper-other-chat .chat-dtls-wrapper:last-child {
@@ -552,14 +603,14 @@
     padding: 12px 20px;
 }
 @media screen and (max-width: 1300px){
-    .chat-user {
+    /*.chat-user {
         max-width: 350px;
         flex: 0 0 350px;
     }
     .chat-details {
         max-width: calc(100% - 350px);
         flex-basis: calc(100% - 350px);
-    }
+    }*/
     .each-user-wrapper li {
         padding: 15px 10px;
     }
@@ -584,6 +635,22 @@
         min-height: 100px;
         overflow: auto;
         max-height: 350px;
+    }
+}
+@media screen and (max-width: 767px){
+    .chat-box textarea {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 576px){
+    .getVerified {
+        display: block;
+    }
+    .getVerified .another-common-btn{
+        min-width: 122px;
+    }
+    .sp-right{
+        text-align: right;
     }
 }
 /*Message Style E

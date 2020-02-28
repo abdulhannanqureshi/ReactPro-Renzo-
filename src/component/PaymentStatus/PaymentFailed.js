@@ -22,7 +22,7 @@ render() {
                 <p className="common-text2">Payment failed. </p>
                 <p className="common-text2">Please try again later.</p>
                 <div className="text-center m-top-30">
-                    <Link to={'/'} className="another-common-btn btn-increase-width1">TRY AGAIN</Link>
+                    <Link to={'/'} className="another-common-btn btn-increase-width1">Try Again</Link>
                 </div>
             </div>
         </section>    

@@ -10,7 +10,7 @@
 	text-decoration: underline;
 }
 .aside-check {
-    padding:30px ;
+    padding:30px 16px;
 }
 #wrapper .small-rating {
     padding: 0px 6px;
@@ -18,6 +18,9 @@
 }
 #wrapper .small-rating li img {
     width: 12px;
+}
+.img-res1{
+	width: 100%;
 }
 @media screen and (max-width: 1450px){
 	.aside-check {
@@ -39,6 +42,16 @@
 	    margin: 0 0 20px;
 	}
 	.width-rem-170 {
+    	max-width: 100% !important;
+    	flex-basis: 100% !important;
+    	padding-left: 0;
+	}
+	.width-120 {
+	    max-width: 100% !important;
+	    flex: 0 0 100% !important;
+	    margin: 0 0 20px;
+	}
+	.width-rem-120 {
     	max-width: 100% !important;
     	flex-basis: 100% !important;
     	padding-left: 0;
@@ -82,7 +95,9 @@
 	.aside-check .item-details {
     	text-align: left;
 	}
-
+	.img-res1{
+		width: 250px;
+	}
 }
 /*Shipping Info Style E 
 ----------------------------*/

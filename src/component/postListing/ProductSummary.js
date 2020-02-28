@@ -5,8 +5,19 @@ import { Link } from 'react-router-dom';
 import './style.css';
 
 class ProductSummary extends React.Component{
-
+    constructor(props){
+        super(props);
+        this.state = {
+            rangeValue: 3
+        }
+    }
+    handleChange(event, index) {
+        const { rangeValue } = this.state;
+        this.setState({ rangeValue: event.target.value});
+    }
 render() {
+    const { value } = this.state;
+    const { label } = this.props;
   return ( 
   <div>
     <Header />
@@ -66,7 +77,13 @@ render() {
                             <div className="rang-wrapper">
                                 <span className="summary-label">Rental Price</span>
                                 <div>
-                                    <input type="range" min="1" max="100"  className="rangeSlider" id="myRange" />
+                                    <input type="range" 
+                                    min={0}
+                                    max={2}
+                                    step={1}
+                                    value={value} 
+                                    onChange={this.handleChange.bind(this)} 
+                                    className="rangeSlider" id="myRange" />
                                 </div>
                                 <ul className="week-amount">
                                     <li>
@@ -123,7 +140,7 @@ render() {
                                 </span>
                                 <label>I hereby confirm that above provided information is true and correct.</label>
                             </div>
-                            <Link to={'/'} className="another-common-btn btn-increase-width">Add Product</Link>
+                            <Link to={'/productsubmitted'} className="another-common-btn btn-increase-width">Add Product</Link>
                         </div>
                     </div>
                 </div>            

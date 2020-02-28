@@ -9,7 +9,7 @@ render() {
         <div className="inner-part">
          	<div className="login-details">
          		<div>
-         			<h2 className="title-login">SIGNUP</h2>
+         			<h2 className="title-login">Signup</h2>
 					<div className="social-btn-wrapper">
 						<Link className="facebook-btn" to={'/'}> Signup with Facebook</Link>
 						<Link className="google-btn" to={'/'}>Signup with Google</Link>
@@ -30,7 +30,7 @@ render() {
 		         				<input type="password" className="form-control" name="password" id="password" placeholder="* * * * * * * *" />
 		         			</div>
 		         			<div className="form-group m-bottom-20">
-		         				<label>CONFIRM Password</label>
+		         				<label>Confirm Password</label>
 		         				<input type="password" className="form-control" name="confirm-password" id="confirm-password" placeholder="* * * * * * * *" />
 		         			</div>
 		         			<div className="m-top-50">
@@ -39,7 +39,7 @@ render() {
 		         		</form>
 		         		<div className="forget-pass">
 	         				<div className="checkbox-wrapper">
-	         					<p className="dont-account">By signing up, you agree to Renzo's <Link to={'/'}>Terms ans Condition & Privacy Policy</Link>	</p>
+	         					<p className="dont-account">By signing up, you agree to Renzo's <Link to={'/agreement'}>Terms & Condition & Privacy Policy</Link>	</p>
 	         					
 	         				</div>
 	         				<div className="forget-link">

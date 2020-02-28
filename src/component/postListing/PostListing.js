@@ -71,7 +71,7 @@ render() {
                                     <input type="text" className="form-control" name="street" id="street" placeholder="Enter Street" />
                                 </div> 
                                 <div className="form-group">
-                                    <label>SUBURB</label>
+                                    <label>Suburb</label>
                                     <input type="text" className="form-control" name="suburb" id="suburb" placeholder="Enter Suburb Area" />
                                 </div> 
                                 <div className="form-group">
@@ -84,8 +84,8 @@ render() {
                                     <label>Product Images</label>
                                     <div className="browese-full">
                                         <h3 className="dragTitle">Drag & drop files here</h3>
-                                        <p className="dragOr">or</p>
-                                        <p><Link to={'/'} className="common-btn-rds">BROWSE FILES</Link></p>
+                                        <p className="dragOr">Or</p>
+                                        <p><Link to={'/'} className="common-btn-rds">Browse Files</Link></p>
                                         <p className="browse-text">Prepare images before uploading. Upload image larger than 355px. <br/> Max number of images is 5. Max image size is 2 MB.</p>
                                         <input type="file" />
                                     </div>
@@ -93,7 +93,7 @@ render() {
                             </div>    
                             <div className="col-sm-12 m-bottom-30">
                                 <div className="text-center m-bottom-30">
-                                    <Link to={'/'} className="another-common-btn btn-increase-width">NEXT STEP ---> Agreement</Link>
+                                    <Link to={'/agreementupload'} className="another-common-btn btn-increase-width">Next Step ---> Agreement</Link>
                                 </div>
                             </div>
                         </div>

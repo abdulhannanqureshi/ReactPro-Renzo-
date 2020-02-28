@@ -26,7 +26,7 @@ render() {
                     <div className="bdr-step"></div>
                 </div>
             </div>
-            <div className="container-fluid container-padding m-bottom-100"> 
+            <div className="container m-bottom-100"> 
                 <div className="form-wrapper cartWrapper">
                     <form action="">
                         <div className="row">
@@ -46,7 +46,7 @@ render() {
                                                     <li><img src="assets/img/icon/icon_star_empty.png" alt="star" /></li> 
                                                 </ul>
                                                 <div className="custom-row align-items-center justify-content-between">
-                                                    <h2 className="subTitle text-uppercase ">Play station 2</h2>
+                                                    <h2 className="subTitle">Play station 2</h2>
                                                     <span className="title-drop f-w-bold">Rs 1000/Week</span>
                                                 </div>
                                                 <div className="delivery-date m-top-10 m-bottom-0"> 

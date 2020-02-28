@@ -208,6 +208,9 @@
 .wrapper-tabs .common-text{
 	text-align: justify;
 }
+.widh-list.hide{
+	display: none;
+}
 @media screen and (max-width: 1200px){
 	#wrapper .rent-details p {
     	font-size: 15px;

@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classnames from "classnames";
+import DropdownButton from 'react-bootstrap/DropdownButton'
+import Dropdown from 'react-bootstrap/Dropdown'
 
-class Header extends React.Component{
+class HeaderLogin extends React.Component{
 	constructor(props) {
         super(props);
         this.state = {
@@ -71,14 +73,14 @@ class Header extends React.Component{
 											<div className="m-bottom-20">
 												<h2 className="title-drop">sound equipment</h2>
 												<ul>
-													<li><Link to={'/'}>collar Mic</Link> </li>
+													<li><Link to={'/'}> collar Mic</Link> </li>
 													<li><Link to={'/'}>Microphone</Link></li>
 												</ul>
 											</div>
 
 											<h2 className="title-drop">sound equipment</h2>
 											<ul>
-												<li><Link to={'/'}>collar Mic</Link> </li>
+												<li><Link to={'/'}> collar Mic</Link> </li>
 												<li><Link to={'/'}>Microphone</Link></li>
 											</ul>
 										</div>
@@ -102,7 +104,13 @@ class Header extends React.Component{
 						<Link to={'/wishlist'}>
 							<img src="assets/img/icon/icon_heart.png" alt="Heart" />
 						</Link>
-						<Link to={'login'}>Login/Signup</Link>
+						<div className="custom-drop">
+							<img src="assets/img/image/img_user.png" alt="user" />
+							<DropdownButton title="Hi, John">
+								<Dropdown.Item href="/profile">Profile</Dropdown.Item>
+								<Dropdown.Item href="/">Logout</Dropdown.Item>
+							</DropdownButton>
+						</div>
 						<Link to={'/postlisting'} className="common-btn">Post a listing</Link>
 					</div>
 				</div>	
@@ -138,7 +146,7 @@ class Header extends React.Component{
 
 									<h2 className="title-drop">sound equipment</h2>
 									<ul>
-										<li><Link to={'/'}> collar Mic</Link> </li>
+										<li><Link to={'/'}>collar Mic</Link> </li>
 										<li><Link to={'/'}>Microphone</Link></li>
 									</ul>
 								</div>
@@ -150,13 +158,19 @@ class Header extends React.Component{
 					<li><Link to={'/'}>Cameras</Link></li>
 				</ul>
 				<ul className="menu-login">				
-					<li>
-						<form className="search-wrapper">
+					<li><form className="search-wrapper">
 							<input className="search-field" type="text" placeholder="What you want to rent" />
-						</form>
-					</li> 
+						</form></li> 
 					<li><Link to={'/wishlist'}><img src="assets/img/icon/icon_heart.png" alt="Heart" /></Link></li>
-					<li><Link to={'/login'}>LOGIN/SIGNUP</Link></li>
+					<li>
+						<div className="custom-drop">
+							<img src="assets/img/image/img_user.png" alt="user" />
+							<DropdownButton title="Hi, John">
+								<Dropdown.Item href="#">Profile</Dropdown.Item>
+								<Dropdown.Item href="#">Logout</Dropdown.Item>
+							</DropdownButton>
+						</div>
+					</li>
 					<li><Link to={'/postlisting'} className="common-btn">Post a listing</Link></li>
 				</ul>
 			</div>
@@ -166,4 +180,4 @@ class Header extends React.Component{
 }
 }
 
-export default Header;
+export default HeaderLogin;

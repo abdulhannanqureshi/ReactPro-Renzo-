@@ -9,7 +9,7 @@ render() {
         <div className="inner-part">
          	<div className="login-details">
          		<div>
-         			<h2 className="title-login">LOGIN</h2>
+         			<h2 className="title-login">Login</h2>
 					<div className="social-btn-wrapper">
 						<Link className="facebook-btn" to={'/'}> Login with Facebook</Link>
 						<Link className="google-btn" to={'/'}>Login with Google</Link>
@@ -43,7 +43,7 @@ render() {
 		         				</div>
 		         			</div>
 		         			<div>
-		         				<button type="submit" className="full-btn">Login</button>
+		         				<Link to={'/profile'} className="full-btn text-center">Login</Link>	
 		         			</div>
 		         		</form>
 		         		<p className="dont-account">Don't have a account? <Link to={'/Signup'}>Sign up.</Link>	</p>

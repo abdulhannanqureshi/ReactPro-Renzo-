@@ -26,7 +26,7 @@ render() {
                     <div className="bdr-step"></div>
                 </div>
             </div>
-            <div className="container-fluid container-padding m-bottom-100"> 
+            <div className="container m-bottom-100"> 
                 <div className="form-wrapper">
                     <form action="">
                         <div className="row">
@@ -67,7 +67,7 @@ render() {
                                                 <input type="text" className="form-control" name="address" id="address" placeholder="Enter Address" />
                                             </div> 
                                             <div className="form-group">
-                                                <label>SUBURB</label>
+                                                <label>Suburb</label>
                                                 <input type="text" className="form-control" name="suburb" id="suburb" placeholder="Enter Suburb Area" />
                                             </div> 
                                             <div className="form-group">
@@ -96,10 +96,10 @@ render() {
                                 <div className="box-shadow-outer p-0">
                                     <div className="aside-check bdr-btm">
                                         <div className="custom-row">
-                                            <div className="item-img width-170">
+                                            <div className="item-img width-120">
                                                 <img className="radius-8 img-res1" src="assets/img/image/product_image1.png" alt="Item" />
                                             </div> 
-                                            <div className="item-details width-rem-170 p-top-0  align-items-center d-flex">
+                                            <div className="item-details width-rem-120 p-top-0  align-items-center d-flex">
                                                 <div>
                                                     <ul className="rating-wrapper small-rating">
                                                         <li><img src="assets/img/icon/icon_star_full.png" alt="star" /></li>

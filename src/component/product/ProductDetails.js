@@ -6,25 +6,33 @@ import { Link } from 'react-router-dom';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import Modal from 'react-bootstrap/Modal'
-
-import {
-  Magnifier,
-  GlassMagnifier,
-  SideBySideMagnifier,
-  PictureInPictureMagnifier,
-  MOUSE_ACTIVATION,
-  TOUCH_ACTIVATION
-} from "react-image-magnifiers";
+import AliceCarousel from 'react-alice-carousel'
+import "react-alice-carousel/lib/alice-carousel.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 class ProductDetails extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            show: false
+            show: false,
+            deliveryDate: '',
+            pickupDate: '',
+            rangeValue: 3
         }
         this.handleShow = this.handleShow.bind(this);
         this.handleClose = this.handleClose.bind(this);
     }
+    handleChangeDelivery = date => {
+        this.setState({
+            deliveryDate: date
+        });
+    };
+    handleChangePickup = date => {
+        this.setState({
+            pickupDate: date
+        });
+    };
     handleShow(){
        this.setState({
             show: true
@@ -35,13 +43,25 @@ class ProductDetails extends React.Component{
             show: false
        });
     }
+    responsive = {
+        0: { 
+            items: 1,
+            itemsInSlide: 1 
+        }
+    }
+    handleChange(event, index) {
+        const { rangeValue } = this.state;
+        this.setState({ rangeValue: event.target.value});
+    }
 render() {
+    const { value } = this.state;
+    const { label } = this.props;
   return ( 
   <div>
     <Header />
     <div className="Product">
         <section className="">
-            <div className="container-fluid container-padding">
+            <div className="container">
                 <div className="row">
                     <div className="col-sm-12">
                         <div className="breadcrumb-wrapper">
@@ -58,15 +78,37 @@ render() {
             </div>
         </section>
         <section className="warpper-product-slider">
-            <div className="container-fluid container-padding">
+            <div className="container">
                 <div className="row">
                     <div className="col-md-12 col-lg-7">
-                        <GlassMagnifier
-                              imageSrc="assets/img/image/product_image1.png"
-                              imageAlt="Example"
-                              largeImageSrc="assets/img/image/product_image1.png"
-                              SideBySideMagnifier="zoom-in" 
-                            />
+                        <div className="product-img1 only-img-slider slider-wrapper1">
+                            <AliceCarousel 
+                                dotsDisabled={true}
+                                responsive={this.responsive}
+                                autoPlayInterval={3000}
+                                autoPlayDirection="rtl"
+                                autoPlay={false}
+                                fadeOutAnimation={true}
+                                mouseTrackingEnabled={false}
+                                playButtonEnabled={false}
+                                disableAutoPlayOnAction={true}
+                                onSlideChange={this.onSlideChange}
+                                onSlideChanged={this.onSlideChanged}
+                            >
+                                <div>
+                                    <img className="product-details-img" src="assets/img/image/product_image1.png" alt="Play Station" />
+                                </div>
+                                <div>
+                                    <img className="product-details-img" src="assets/img/image/product_image2.png" alt="Play Station" />
+                                </div>
+                                <div>
+                                    <img className="product-details-img" src="assets/img/image/product_image3.jpg" alt="Play Station" />
+                                </div>
+                                <div>
+                                    <img className="product-details-img" src="assets/img/image/product_image4.jpg" alt="Play Station" />
+                                </div>
+                            </AliceCarousel>
+                        </div>
                     </div>  
                     <div className="col-md-12 col-lg-5">
                         <ul className="rating-wrapper">
@@ -90,7 +132,13 @@ render() {
                             <h2 className="subTitle1 with-wishlist">Play station 2 <span><img src="assets/img/icon/icon_heart.png" alt="Wish List" /></span></h2>
                             <div className="rang-wrapper">
                                 <div>
-                                    <input type="range" min="1" max="100"  className="rangeSlider" id="myRange" />
+                                    <input type="range"
+                                      min={0}
+                                      max={2}
+                                      step={1}
+                                      value={value}
+                                      onChange={this.handleChange.bind(this)} 
+                                      className="rangeSlider" id="myRange" />
                                 </div>
                                 <ul className="week-amount">
                                     <li><p>Daily</p></li>
@@ -104,10 +152,18 @@ render() {
                             </ul>
                         </div>
                         <div className="checkability">
-                            <h3>Check availability</h3>
+                            <h3>Check Availability</h3>
                             <div className="datepicker-wrapper">
-                                <input type="text" placeholder="Delivery Date" />
-                                <input type="text" placeholder="Pickup Date" />
+                                <DatePicker
+                                    selected={this.state.deliveryDate === '' ? null : this.state.deliveryDate}
+                                    onChange={this.handleChangeDelivery}
+                                     placeholderText="Delivery Date"
+                                  />
+                                <DatePicker
+                                    selected={this.state.pickupDate === '' ? null : this.state.pickupDate}
+                                    onChange={this.handleChangePickup}
+                                     placeholderText="Pickup Date"
+                                  />
                             </div> 
                             <p className="product-not-sms m-bottom-50">*Sorry! The product is not available for these dates.</p>
                             <p><button className="common-btn-rds" onClick={this.handleShow}>Rent Now</button></p>
@@ -117,7 +173,7 @@ render() {
             </div>
         </section>
         <section className="">
-            <div className="container-fluid container-padding">
+            <div className="container">
                 <div>
                     <div className="product-tabs-wrapper">
                         <Tabs id="controlled-tab-example" defaultActiveKey="productDesc">
@@ -166,7 +222,7 @@ render() {
                                     </div>
                                     <div className="col-md-6 col-lg-4">
                                         <div className="review-text">
-                                            <label className="rat-label">Your ReVIEW</label>
+                                            <label className="rat-label">Your Review</label>
                                             <textarea cols="30" rows="4" placeholder="Type a review for the product..."></textarea> 
                                         </div>
                                     </div>
@@ -413,14 +469,41 @@ render() {
             </div>
         </section>
         <section className="section relevent-pro">
-            <div className="container-fluid container-padding">
-                <h2 className="title">Relevant Products</h2>
+            <div className="container">
+                <h2 className="title">Similar Products</h2>
                 <p className="title-desc">Essentials add tiny details to your product enhancing its overall experience</p>
-                <div className="wrapper-box">
+                <div className="wrapper-box1 m-top-60">
                     <div className="row">
-                        <div className="col-md-6 col-xl-3">
+                        <div className="col-md-6 col-xl-4">
                             <div className="product-list">
-                                <p className="product-img"><img src="assets/img/image/img_watch.png" alt="Watch" /></p>
+                                <div className="product-img only-img-slider">
+                                    <AliceCarousel 
+                                        dotsDisabled={true}
+                                        responsive={this.responsive}
+                                        autoPlayInterval={3000}
+                                        autoPlayDirection="rtl"
+                                        autoPlay={false}
+                                        fadeOutAnimation={true}
+                                        mouseTrackingEnabled={false}
+                                        playButtonEnabled={false}
+                                        disableAutoPlayOnAction={true}
+                                        onSlideChange={this.onSlideChange}
+                                        onSlideChanged={this.onSlideChanged}
+                                    >
+                                        <div>
+                                            <img src="assets/img/image/product_image1.png" alt="Watch" />
+                                        </div>
+                                        <div>
+                                            <img src="assets/img/image/product_image2.png" alt="Product" />
+                                        </div>
+                                        <div>
+                                            <img src="assets/img/image/product_image3.jpg" alt="Product" />
+                                        </div>
+                                        <div>
+                                            <img src="assets/img/image/product_image4.jpg" alt="Product" />
+                                        </div>
+                                    </AliceCarousel>
+                                </div>
                                 <ul className="rent-wrapper">
                                     <li><span>Daily</span>RS 1000</li>
                                     <li><span>Weekly</span>RS 2660</li>
@@ -429,15 +512,42 @@ render() {
                                 <div className="rent-details">
                                     <p><span>Luxury watches</span> starting at Rs 700</p>
                                     <div className="btn-wrapper">
-                                        <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
+                                        <Link className="common-btn-rds" to={'/'}>Rent Now </Link>
                                         <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-6 col-xl-3">
+                        <div className="col-md-6 col-xl-4">
                             <div className="product-list">
-                                <p className="product-img"><img src="assets/img/image/img_byk.png" alt="BYK" /></p>
+                                <div className="product-img only-img-slider">
+                                    <AliceCarousel 
+                                        dotsDisabled={true}
+                                        responsive={this.responsive}
+                                        autoPlayInterval={3000}
+                                        autoPlayDirection="rtl"
+                                        autoPlay={false}
+                                        fadeOutAnimation={true}
+                                        mouseTrackingEnabled={false}
+                                        playButtonEnabled={false}
+                                        disableAutoPlayOnAction={true}
+                                        onSlideChange={this.onSlideChange}
+                                        onSlideChanged={this.onSlideChanged}
+                                    >
+                                        <div>
+                                            <img src="assets/img/image/product_image1.png" alt="Watch" />
+                                        </div>
+                                        <div>
+                                            <img src="assets/img/image/product_image2.png" alt="Product" />
+                                        </div>
+                                        <div>
+                                            <img src="assets/img/image/product_image3.jpg" alt="Product" />
+                                        </div>
+                                        <div>
+                                            <img src="assets/img/image/product_image4.jpg" alt="Product" />
+                                        </div>
+                                    </AliceCarousel>
+                                </div>
                                 <ul className="rent-wrapper">
                                     <li><span>Daily</span>RS 1000</li>
                                     <li><span>Weekly</span>RS 2660</li>
@@ -446,32 +556,42 @@ render() {
                                 <div className="rent-details">
                                     <p><span>Luxury watches</span> starting at Rs 700</p>
                                     <div className="btn-wrapper">
-                                        <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
+                                        <Link className="common-btn-rds" to={'/'}>Rent Now </Link>
                                         <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart_active.png" alt="Wish List" /> </Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-6 col-xl-3">
+                        <div className="col-md-6 col-xl-4">
                             <div className="product-list">
-                                <p className="product-img"><img src="assets/img/image/img_dron.png" alt="Dron" /></p>
-                                <ul className="rent-wrapper">
-                                    <li><span>Daily</span>RS 1000</li>
-                                    <li><span>Weekly</span>RS 2660</li>
-                                    <li><span>Monthly</span>RS 5400</li>
-                                </ul>
-                                <div className="rent-details">
-                                    <p><span>Luxury watches</span> starting at Rs 700</p>
-                                    <div className="btn-wrapper">
-                                        <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
-                                        <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart_active.png" alt="Wish List" /> </Link>
-                                    </div>
+                                <div className="product-img only-img-slider">
+                                    <AliceCarousel 
+                                        dotsDisabled={true}
+                                        responsive={this.responsive}
+                                        autoPlayInterval={3000}
+                                        autoPlayDirection="rtl"
+                                        autoPlay={false}
+                                        fadeOutAnimation={true}
+                                        mouseTrackingEnabled={false}
+                                        playButtonEnabled={false}
+                                        disableAutoPlayOnAction={true}
+                                        onSlideChange={this.onSlideChange}
+                                        onSlideChanged={this.onSlideChanged}
+                                    >
+                                        <div>
+                                            <img src="assets/img/image/product_image1.png" alt="Watch" />
+                                        </div>
+                                        <div>
+                                            <img src="assets/img/image/product_image2.png" alt="Product" />
+                                        </div>
+                                        <div>
+                                            <img src="assets/img/image/product_image3.jpg" alt="Product" />
+                                        </div>
+                                        <div>
+                                            <img src="assets/img/image/product_image4.jpg" alt="Product" />
+                                        </div>
+                                    </AliceCarousel>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="col-md-6 col-xl-3">
-                            <div className="product-list">
-                                <p className="product-img"><img src="assets/img/image/img_watch.png" alt="Watch" /></p>
                                 <ul className="rent-wrapper">
                                     <li><span>Daily</span>RS 1000</li>
                                     <li><span>Weekly</span>RS 2660</li>
@@ -480,8 +600,8 @@ render() {
                                 <div className="rent-details">
                                     <p><span>Luxury watches</span> starting at Rs 700</p>
                                     <div className="btn-wrapper">
-                                        <Link className="common-btn-rds" to={'/'}>RENT NOW </Link>
-                                        <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart.png" alt="Wish List" /> </Link>
+                                        <Link className="common-btn-rds" to={'/'}>Rent Now </Link>
+                                        <Link className="widh-list" to={'/'}><img src="assets/img/icon/icon_heart_active.png" alt="Wish List" /> </Link>
                                     </div>
                                 </div>
                             </div>

@@ -12,7 +12,7 @@ render() {
     <Header />
     <div className="ProductAgreement article-wrapper">
         <section className="product-agree-wrapper">
-            <div className="container-fluid container-padding m-bottom-100"> 
+            <div className="container m-bottom-100"> 
                 <div className="form-wrapper">
                     <div className="text-center m-bottom-80">
                         <h2 className="title font-size-32">Get in touch with us</h2>
@@ -21,7 +21,7 @@ render() {
                     </div>
                     <form action="">
                         <div className="row">
-                            <div className="col-md-12 sp-m-b-30 col-lg-6 col-xl-8">
+                            <div className="col-md-7 col-lg-7 col-xl-8 sp-order-1">
                                 <div className="box-shadow-outer">
                                     <div className="row">
                                         <div className="col-md-6">
@@ -48,11 +48,11 @@ render() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-12 col-lg-6 col-xl-4">
+                            <div className="col-md-5 col-lg-5 col-xl-4">
                                 <div className="contact-inner">
                                     <div className="custom-row m-bottom-70">
                                         <div className="width-120">
-                                            <img class="icon-contact" src="assets/img/image/img_call.png" alt="Call" />
+                                            <img className="icon-contact" src="assets/img/image/img_call.png" alt="Call" />
                                         </div>
                                         <div className="width-rem-120 d-flex align-items-center"> 
                                             <div>
@@ -63,7 +63,7 @@ render() {
                                     </div>
                                     <div className="custom-row m-bottom-70">
                                         <div className="width-120">
-                                            <img class="icon-contact" src="assets/img/image/img_location.png" alt="Location" />
+                                            <img className="icon-contact" src="assets/img/image/img_location.png" alt="Location" />
                                         </div>
                                         <div className="width-rem-120 d-flex align-items-center"> 
                                             <div>
@@ -74,7 +74,7 @@ render() {
                                     </div>
                                     <div className="custom-row">
                                         <div className="width-120">
-                                            <img class="icon-contact" src="assets/img/image/img_email.png" alt="Email" />
+                                            <img className="icon-contact" src="assets/img/image/img_email.png" alt="Email" />
                                         </div>
                                         <div className="width-rem-120 d-flex align-items-center"> 
                                             <div>

@@ -1,12 +1,15 @@
 /*Faq Style S
 ---------------------------*/
-.category-wrapper .Collapsible .Collapsible__trigger::before {
+.category-wrapper.accordian-wrapper .Collapsible .Collapsible__trigger::before {
     content: "●";
     display: inline-block;
     padding: 0 12px;
 }
 .accordian-wrapper .Collapsible__contentInner{
     padding: 0 36px;
+}
+.category-wrapper .Collapsible .Collapsible__trigger{
+	padding-right: 15px;
 }
 /*Faq Style E
 ---------------------------*/

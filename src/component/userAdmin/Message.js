@@ -13,7 +13,7 @@ render() {
     <Header />
     <div className="wishlist-wrapper article-wrapper">
         <section className="product-list-wrapper">
-            <div className="">
+            <div className="container">
                 <div className="custom-row">
                     <div className="aside">
                         <AsideTab />
@@ -21,7 +21,7 @@ render() {
                     <div className="main p-left-30">
                         <div className="row relevent-pro cate-product-list">
                             <div className="col-sm-12">
-                                <h2 className="title font-size-30">My Messages</h2>
+                                <h2 className="title font-size-30">Just Messages</h2>
                                 <p className="title-desc">View all your chats here.</p>
                                 <p className="m-bottom-30"><img src="assets/img/icon/icon_title.png" alt="Icon Title" /></p>
                             </div>
@@ -40,11 +40,11 @@ render() {
                                                         </div>
                                                         <div className="each-user-detail">
                                                             <div className="d-flex justify-content-between m-bottom-5">
-                                                                <h2 className="small-title font-size-15">Alice Whitman</h2>
-                                                                <span className="clr-gray font-size-14">11:25 am</span> 
+                                                                <h2 className="small-title font-size-14">Alice Whitman</h2>
+                                                                <span className="clr-gray font-size-13">11:25 am</span> 
                                                             </div>
                                                             <div className="d-flex justify-content-between">
-                                                                <p className="font-size-14">We can finalise for Rs 1000.</p>
+                                                                <p className="font-size-13">We can finalise for Rs 1000.</p>
                                                                 <span className="cutome-badge">2</span> 
                                                             </div>
                                                         </div>
@@ -59,11 +59,11 @@ render() {
                                                         </div>
                                                         <div className="each-user-detail">
                                                             <div className="d-flex justify-content-between m-bottom-5">
-                                                                <h2 className="small-title font-size-15">Alice Whitman</h2>
-                                                                <span className="clr-gray font-size-14">11:25 am</span> 
+                                                                <h2 className="small-title font-size-14">Alice Whitman</h2>
+                                                                <span className="clr-gray font-size-13">11:25 am</span> 
                                                             </div>
                                                             <div className="d-flex justify-content-between">
-                                                                <p className="font-size-14">We can finalise for Rs 1000.</p>
+                                                                <p className="font-size-13">We can finalise for Rs 1000.</p>
                                                                 <span className="cutome-badge">2</span> 
                                                             </div>
                                                         </div>
@@ -78,11 +78,11 @@ render() {
                                                         </div>
                                                         <div className="each-user-detail">
                                                             <div className="d-flex justify-content-between m-bottom-5">
-                                                                <h2 className="small-title font-size-15">Alice Whitman</h2>
-                                                                <span className="clr-gray font-size-14">11:25 am</span> 
+                                                                <h2 className="small-title font-size-14">Alice Whitman</h2>
+                                                                <span className="clr-gray font-size-13">11:25 am</span> 
                                                             </div>
                                                             <div className="d-flex justify-content-between">
-                                                                <p className="font-size-14">We can finalise for Rs 1000.</p>
+                                                                <p className="font-size-13">We can finalise for Rs 1000.</p>
                                                                 <span className="cutome-badge">2</span> 
                                                             </div>
                                                         </div>
@@ -97,11 +97,11 @@ render() {
                                                         </div>
                                                         <div className="each-user-detail">
                                                             <div className="d-flex justify-content-between m-bottom-5">
-                                                                <h2 className="small-title font-size-15">Alice Whitman</h2>
-                                                                <span className="clr-gray font-size-14">11:25 am</span> 
+                                                                <h2 className="small-title font-size-14">Alice Whitman</h2>
+                                                                <span className="clr-gray font-size-13">11:25 am</span> 
                                                             </div>
                                                             <div className="d-flex justify-content-between">
-                                                                <p className="font-size-14">We can finalise for Rs 1000.</p>
+                                                                <p className="font-size-13">We can finalise for Rs 1000.</p>
                                                                 <span className="cutome-badge">2</span> 
                                                             </div>
                                                         </div>
@@ -116,11 +116,11 @@ render() {
                                                         </div>
                                                         <div className="each-user-detail">
                                                             <div className="d-flex justify-content-between m-bottom-5">
-                                                                <h2 className="small-title font-size-15">Alice Whitman</h2>
-                                                                <span className="clr-gray font-size-14">11:25 am</span> 
+                                                                <h2 className="small-title font-size-14">Alice Whitman</h2>
+                                                                <span className="clr-gray font-size-13">11:25 am</span> 
                                                             </div>
                                                             <div className="d-flex justify-content-between">
-                                                                <p className="font-size-14">We can finalise for Rs 1000.</p>
+                                                                <p className="font-size-13">We can finalise for Rs 1000.</p>
                                                                 <span className="cutome-badge">2</span> 
                                                             </div>
                                                         </div>

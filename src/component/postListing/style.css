@@ -31,7 +31,7 @@
 .agree-check .checkbox-wrapper label {
     color: #292e34;
     font-weight: 600;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .upload-mrg{
 	margin:30px 0;
@@ -218,7 +218,7 @@
 .product-text-group span {
     font-size: 15px;
     display: inline-block;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: #97989a;
     font-weight: 500;
 }
@@ -230,7 +230,7 @@
 .summary-label {
     font-size: 15px;
     display: inline-block;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: #97989a;
     font-weight: 500;
 }

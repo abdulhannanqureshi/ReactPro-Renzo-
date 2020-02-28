@@ -39,7 +39,7 @@ render() {
                             <button className="delete-btn-rem"><img src="assets/img/icon/icon_delete.png" alt="Delete" /></button>
                         </div>        
                         <div className="text-center m-bottom-30">
-                            <Link to={'/'} className="another-common-btn btn-increase-width">NEXT STEP --> REVIEW</Link>
+                            <Link to={'/productsummary'} className="another-common-btn btn-increase-width">Next Step --> Review</Link>
                         </div>
                     </div>
                 </div>            
